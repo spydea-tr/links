@@ -47,6 +47,7 @@ body {
   box-sizing: border-box;
 }
 
+/* body::before kısmını bununla değiştir */
 body::before {
   content: "";
   position: fixed;
@@ -59,10 +60,11 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
- /* Görsel yüklendiğinde küt diye değil, yumuşakça gelmesi için: */
-  animation: fadeInBackground 1s ease-in;
+  /* Opacity 0'dan 1'e çıkar ve orada kal (forwards) */
+  animation: fadeInBackground 1.5s ease-in forwards;
 }
 
+/* Animasyon tanımı */
 @keyframes fadeInBackground {
   from { opacity: 0; }
   to { opacity: 1; }
