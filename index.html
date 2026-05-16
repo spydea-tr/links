@@ -27,14 +27,16 @@
 /* ---------------- mevcut CSS ---------------- */
 
 html, body {
-  width: 100%;
-  max-width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: #0b0b0b;
-}
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #0b0b0b; /* Görsel gelmezse burası siyah kalır */
+    }
+
+
 
 body {
   font-family: Trebuchet MS, sans-serif;
@@ -47,21 +49,20 @@ body {
   box-sizing: border-box;
 }
 
-/* body::before kısmını bununla değiştir */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('sitebackground.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* BURAYI KONTROL ET: Resim adı tam olarak bu mu? */
+      background-image: url('sitebackground.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
 
 .container {
   width: 100%;
@@ -153,9 +154,3 @@ footer {
  </div>
 </body>
 </html>
-
-
-
-
-
-
